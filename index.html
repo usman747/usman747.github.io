@@ -3,66 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Name] | Portfolio</title>
+    <title>Usman | Emdedded Systems Developer</title>
     <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
-            max-width: 800px;
+        }
+
+        .container {
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
-            color: #333;
-            background-color: #f9f9f9;
         }
+
         header {
-            text-align: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
             margin-bottom: 40px;
         }
-        h1 { margin-bottom: 5px; color: #111; }
-        .subtitle { color: #666; font-size: 1.2rem; margin-top: 0; }
-        section {
-            background: white;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+        .terminal-header {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
         }
-        h2 { border-bottom: 2px solid #eaeaea; padding-bottom: 8px; color: #222; }
-        .project { margin-bottom: 20px; }
-        .project-title { font-weight: bold; color: #0066cc; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin: 0 0 20px 0;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 20px;
+            border: 1px solid var(--accent);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .links a:hover {
+            background-color: var(--accent);
+            color: var(--bg-color);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: var(--bg-color);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            margin-top: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>[Your Name]</h1>
-        <p class="subtitle">[Your Profession / Role, e.g., Web Developer]</p>
-        <p><a href="mailto:your.email@example.com">Email Me</a> | <a href="https://linkedin.com">LinkedIn</a></p>
-    </header>
+    <div class="container">
+        <header>
+            <div class="terminal-header">guest@zeeshan:~ $ ./intro</div>
+            <h1>Zeeshan</h1>
+            <p class="tagline">Full Stack Developer & Systems Explorer</p>
+            <div class="links">
+                <a href="https://github.com">GitHub</a>
+                <a href="mailto:your-email@example.com">Email</a>
+                <a href="#">Resume</a>
+            </div>
+        </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Write a brief, punchy introduction about yourself here. Mention your skills, what you love building, and what you are currently working on.</p>
-    </section>
+        <section id="about">
+            <h2>01. About Me</h2>
+            <p>Hello! I am a software engineer specializing in building high-performance web systems and minimal user interfaces. Passionate about clean code, open-source projects, and technical problem-solving.</p>
+        </section>
 
-    <section>
-        <h2>Projects</h2>
-        <div class="project">
-            <div class="project-title">[Project Name One]</div>
-            <p>A short description of what this project does, the tools you used to build it, and a link to see it working.</p>
-        </div>
-        <div class="project">
-            <div class="project-title">[Project Name Two]</div>
-            <p>Another description for a second project to showcase your range of skills.</p>
-        </div>
-    </section>
+        <section id="projects">
+            <h2>02. Selected Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-title">🚀 Project-Alpha</div>
+                    <p>A fast, light, static compiler engine designed for simple deployment workflows.</p>
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <div class="card">
+                    <div class="card-title">📦 Data-Lens</div>
+                    <p>An automated analysis tool providing real-time command line terminal tracking updates.</p>
+                    <span class="tag">Python</span>
+                    <span class="tag">API Integration</span>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h2>Skills</h2>
-        <p>HTML, CSS, JavaScript, Git, GitHub, [Add your other skills here...]</p>
-    </section>
+        <section id="skills">
+            <h2>03. Technical Arsenal</h2>
+            <div class="skills-list">
+                <div class="skill-item">Git / GitHub</div>
+                <div class="skill-item">HTML5 / CSS3</div>
+                <div class="skill-item">JavaScript (ES6+)</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Linux / Shell Scripts</div>
+            </div>
+        </section>
+    </div>
 
 </body>
 </html>
