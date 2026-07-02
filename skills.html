@@ -89,11 +89,20 @@
     font-size: 1rem;
 }
 
-h3::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--border);
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+h3 {
+    color: var(--accent);
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-size: 1rem;
 }
 
 .skill-item {
