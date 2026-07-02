@@ -24,7 +24,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -78,7 +78,37 @@
             border-bottom: 1px solid var(--border);
             padding-bottom: 8px;
         }
+        
+        h3 {
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
 
+h3::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.skill-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -123,46 +153,8 @@
             flex-wrap: wrap;
             gap: 10px;
         }
+        
 
-        .skill-item {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 8px 16px;
-            border-radius: 4px;
-        }
-        .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.skill-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 18px;
-    transition: all 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-}
-
-.skill-card h3 {
-    color: var(--accent);
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-.skill-card p {
-    margin: 0;
-    color: var(--text-main);
-    line-height: 1.7;
-    font-size: 0.9rem;
-}
     </style>
 </head>
 <body>
@@ -263,8 +255,6 @@
 </div>
 
     </div>
-
-</section>
 
 </section>
 
