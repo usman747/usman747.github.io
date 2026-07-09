@@ -160,7 +160,21 @@
     <h2>01. Company Projects</h2>
     <div class="grid">
 
-         <div class="card">
+        
+           <div class="card">
+            <div class="card-title">Power Amplification circuit for aircraft's radar motor [BCube Pvt Ltd-2020/21]</div>
+    <ul>    
+        <li>Designed power amplification circuit (PAC) for mechanically steering antenna of aircraft's radar, it included a 350W motor driver (full / H-bridge configuration), with system voltage of 50V and 6.2A maximum current.</li>
+        <li>The PAC had over-voltage/under-voltage protection, over-current protection, over-temperature warning & shutdown. Also, it had current limiting feature.</li>
+        <li>Designed a mapping/conditioning circuit, converting analog voltage signals into acceptable range for ATiny104's (uC) ADC</li>
+        <li>Coded firmware in bare-metal to produce PWM for forward/reverse control of both azimuth & elevation motor channels.<li>
+    </ul>      
+            <span class="tag">OrCad</span>
+            <span class="tag">Atmel A328p</span>
+        </div>
+        
+        
+          <div class="card">
             <div class="card-title">Robot/UGVs Communication Link [BCube Pvt Ltd-2019/20]</div>
     <ul>
         <li>Designed Transceivers for unmanned ground vehicles called RoboCom.</li>
@@ -177,6 +191,18 @@
             <span class="tag">TCP</span>
             <span class="tag">OTA updates</span>
         </div>
+        
+   <div class="card">
+            <div class="card-title">Overhauling of Radar Amplifier & Display Interface [BCube Pvt Ltd-2020]</div>
+    <ul>    
+        <li> Selected an appropriate variable gain amplifier upon required specifications.</li>
+        <li>Designed & selected components for the display interface of a composite video signal. Selected a rugged LCD with MIL-STD brightness, contrast, dust, water and vibration.</li>
+        <li>Designed a uC based setup to adjust brightness/contrast via manual pots.</li>
+    </ul>            
+            <span class="tag">OrCad</span>
+            <span class="tag">Atmel A328p</span>
+        </div>
+        
         
 
         <div class="card">
@@ -236,8 +262,7 @@ energy costs.</p>
 
         <div class="card">
             <div class="card-title">Canny Edge Detection</div>
-            <p>The Canny Edge Detector is a popular edge detection operator that uses a sequence of several algorithms to detect different types of edges in images. 
-                Ran the edge detection algorithm on CPUs as well as GPUs and noted the execution times for each of them respectively</p>
+            <p>Converted CPU code of Canny Edge Detector to run for GPU. Canny edge detector uses a sequence of several algorithms to detect different types of edges in images. Ran the edge detection algorithm on CPUs as well as GPUs and noted the execution times for each of them respectively</p>
             <span class="tag">C++</span>
             <span class="tag">Python</span>
         </div>
