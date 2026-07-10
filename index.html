@@ -136,6 +136,17 @@
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+        .timeline-item a {
+    color: #c5d1eb;      /* soft light blue-gray */
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.timeline-item a:hover {
+    color: var(--accent);
+}
     </style>
 </head>
 <body>
@@ -177,15 +188,6 @@ engineering environments.</p>
         </a>
     </p>
         </div>
-
-        
-        .timeline-item:not(:last-child)::after {
-    content: "";
-    display: block;
-    width: 100%;
-    border-bottom: 2px dotted var(--accent);
-    margin-top: 20px;
-}
         
 
         <div class="timeline-item">
