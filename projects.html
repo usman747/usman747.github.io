@@ -129,6 +129,16 @@
             border: 1px solid var(--border);
             padding: 8px 16px;
             border-radius: 4px;
+
+            .card-wide {
+    grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+    .card-wide {
+        grid-column: span 1;
+    }
+}
         }
     </style>
 </head>
@@ -174,7 +184,7 @@
 
 
 
-            <div class="card">
+            <div class="card card-wide">
             <div class="card-title">Fire Extinguishing System for Underwater Scooter
 Charging [BTS GmbH - 2024/25]</div>
     <ul>    
