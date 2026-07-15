@@ -130,12 +130,22 @@
             padding: 8px 16px;
             border-radius: 4px;
         }
-        
+
         .timeline-item:not(:last-child) {
-    border-bottom: 2px dotted var(--accent);
+    position: relative;
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+
+.timeline-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;              /* or 25% to center it */
+    width: 50%;
+    border-bottom: 2px dotted white;
+}
+        
         .timeline-item a {
     color: #c5d1eb;      /* soft light blue-gray */
     font-weight: 500;
@@ -209,9 +219,6 @@ engineering environments.</p>
             University of Engineering and Technology Taxila
         </a>
     </p>
-            </div>
-        </div>
-
     </div>
 </section>
         
