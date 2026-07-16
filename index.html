@@ -131,11 +131,6 @@
             border-radius: 4px;
         }
 
-        .timeline-item:not(:last-child) {
-    position: relative;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
 
 .timeline-item h3 {
     margin: 0 0 6px 0;   /* top right bottom left */
@@ -144,15 +139,41 @@
 .timeline-item p {
     margin: 2px 0;
 }
-        
-.timeline-item:not(:last-child)::after {
+
+
+
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* Full-width divider */
+.divider-full::after {
     content: "";
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: 0;
-    left: 0;              /* or 25% to center it */
+    border-bottom: 2px dotted white;
+}
+
+/* Half-width divider */
+.divider-half::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 50%;
     border-bottom: 2px dotted white;
 }
+
+
+
+        
+
+        
         
         .timeline-item a {
     color: #c5d1eb;      /* soft light blue-gray */
@@ -267,10 +288,8 @@ engineering environments.</p>
 
 
 
-    <div class="timeline-item">
+    <div class="timeline-item divider-full">
     <h3>Working Student (05/2022 – 09/2023)</h3>
-    <p>BOS Technology Services GmbH</p>
-    <p>Ostfildern, Germany</p>
      <ul>
         <li>Supported embedded hardware development through board bring-up, debugging, schematic design, and PCB development.</li>
         <li>Supported embedded software for motor control and protection systems, including pinch-protection, thermal protection, speed control (soft open/close and zone-based adjustments), and real-time motor speed monitoring using Hall-effect sensor feedback, with collaborative version control using Git.</li>
@@ -279,7 +298,7 @@ engineering environments.</p>
 
 
 
-    <div class="timeline-item">
+    <div class="timeline-item divider-full">
     <h3>Student Assistant (01/2022 – 06/2022)</h3>
     <p>University of Stuttgart</p>
     <p>Stuttgart, Germany</p>
@@ -322,11 +341,8 @@ engineering environments.</p>
     </ul>
 </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item divider-full">
     <h3>Trainee Engineer (11/2018 – 02/2019)</h3>
-    <p>Bcube Pvt Ltd</p>
-    <p>Rawalpindi, Pakistan</p>
-
     <ul>
      <li>Performed antenna, radome, and electromagnetic simulations using CST MWS to evaluate RF performance and integration effects.</li>
     <li>Conducted antenna installation studies on mounting structures and aircraft platforms, validating results through simulated and measured data comparisons.</li>
